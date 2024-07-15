@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <!-- Step 1: Display three inputs -->
+    <input type="text" id="num1" placeholder="Number 1">
+    <input type="text" id="num2" placeholder="Number 2">
+    <input type="text" id="result" placeholder="Result" readonly>
+
+    <!-- Step 2: Buttons for numbers 1 to 9 -->
+    <div id="number-buttons">
+        <button onclick="inputNumber(1)">1</button>
+        <button onclick="inputNumber(2)">2</button>
+        <button onclick="inputNumber(3)">3</button>
+        <button onclick="inputNumber(4)">4</button>
+        <button onclick="inputNumber(5)">5</button>
+        <button onclick="inputNumber(6)">6</button>
+        <button onclick="inputNumber(7)">7</button>
+        <button onclick="inputNumber(8)">8</button>
+        <button onclick="inputNumber(9)">9</button>
+    </div>
+
+    <!-- Step 3: Buttons for operators -->
+    <button onclick="calculate('+')">+</button>
+    <button onclick="calculate('-')">-</button>
+    <button onclick="calculate('*')">x</button>
+    <button onclick="calculate('/')">/</button>
+
+    <script>
+        var selectedInput = document.getElementById("num1");
+
+        function inputNumber(num) {
+            selectedInput.value += num;
+        }
+
+        function calculate(operator) {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var result;
+
+            switch (operator) {
+                case '+':
+                    result = num1 + num2;
+                    break;
+                case '-':
+                    result = num1 - num2;
+                    break;
+                case '*':
+                    result = num1 * num2;
+                    break;
+                case '/':
+                    result = num1 / num2;
+                    break;
+            }
+
+            document.getElementById("result").value = result;
+        }
+
+        document.getElementById("num1").onclick = function() {
+            selectedInput = document.getElementById("num1");
+        }
+
+        document.getElementById("num2").onclick = function() {
+            selectedInput = document.getElementById("num2");
+        }
+    </script>
+</body>
+</html>
