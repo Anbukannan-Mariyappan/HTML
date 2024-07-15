@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport"  content="width=device-width, initial-scale=1.0" />
+        <title>for loop reverse string</title>
+    </head> 
+    <style>
+        body{
+            text-align: center;
+            padding: 10px 20px;
+        }
+        input{
+            background-color:aquamarine;
+            color: black;
+            padding: 10px 20px;
+            margin-bottom: 10px;
+        }
+    </style>
+
+    <body>
+        <h2>FOR LOOP REVERSE STRING</h2>
+        
+        <input type="text" id="inputstr" placeholder="string 1"><br>
+        <input type="text"  onclick="reversestr()" id="output" readonly placeholder="string 2"><br>
+      
+       <script>
+
+        function reversestr(input){
+
+            //inputstr
+            var input=document.getElementById("inputstr").value;
+            var newone=" ";
+
+            // for loop
+            for (var i= input.length-1; i>=0; i--){
+                newone+=input[i];
+           
+            }
+            //output in display
+            document.getElementById("output").value=newone;
+        }
+            
+
+       </script>
+    </body>
+</html>
