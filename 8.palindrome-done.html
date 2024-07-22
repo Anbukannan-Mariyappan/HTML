@@ -1,57 +1,53 @@
 <html>
 <head>
-<title> Palindrome Program in JavaScript </title>
-
+    <title> Palindrome Program in JavaScript </title>
     <style>
-        body{
+        body {
             border: 2px soild black;
             text-align: center;
             padding: 10px 20px;
         }
-        input{
-            background-color:aquamarine;
+
+        input {
+            background-color: aquamarine;
             color: black;
             padding: 10px 40px;
             margin-bottom: 10px;
         }
-	
-	</style>
-
+    </style>
 </head>
+
 <body>
 
-		<h1> Palindrome Program  </h1>
+    <h1> Palindrome Program </h1>
 
-		<label> Enter any string : </label> 
-		<input type ="text" id= "str1"> <br> 
+    <label> Enter any string : </label>
+    <input type="text" id="str1"> <br>
 
-		<label> Result: </label> 
-		 <input type = "text" id = "output" > </b> <br> 
+    <label> Result: </label>
+    <input type="text" id="output"> </b> <br>
 
-		<input type= "submit" onclick = "palindrome()" > 
-		
-		<script type = "text/javascript">
+    <input type="submit" onclick="palindrome()">
 
-            function palindrome()
-            {
-                //input for display
-                var input= document.getElementById("str1").value;
-                var newstr = "";
-                //for loop
-                for (i = input.length-1; i >= 0; i--)
-                {
+    <script type="text/javascript">
+
+        function palindrome() {
+            //input for display
+            var input = document.getElementById("str1").value;
+            var newstr = "";
+            //for loop
+            for (i = input.length - 1; i >= 0; i--) {
                 newstr = newstr + input[i]
-                }
-                //condition
-                if (input == newstr)
-                //output-pass
-                document.getElementById("output"). value = newstr + " is  Palindrome String ";
-                else
-                //output-fail
-                document.getElementById("output"). value = newstr + "is not Palindrome String";
             }
-		</script>
-	</body>
-</html>
+            //condition
+            if (input == newstr)
+                //output-pass
+                document.getElementById("output").value = newstr + " is  Palindrome String ";
+            else
+                //output-fail
+                document.getElementById("output").value = newstr + "is not Palindrome String";
+        }
+    </script>
+</body>
 
- 
+</html>
